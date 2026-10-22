@@ -1,0 +1,17 @@
+{
+  "full": {
+    "label": "フル版",
+    "mods": ["client", "facility", "staff", "custody", "medlist", "salon", "shop", "work", "invoice", "money", "tax", "health", "pension", "team", "make", "tutor", "craft", "service", "creator", "shift"]
+  },
+  "freelance": {"label": "一般フリーランス・個人経営版", "mods": ["work", "invoice", "money", "tax", "shift"]},
+  "facility": {"label": "福祉施設運営者版", "mods": ["facility", "staff", "custody", "medlist", "shift"]},
+  "staff": {"label": "福祉施設支援者版", "mods": ["staff", "custody", "medlist", "shift"]},
+  "user": {"label": "福祉施設利用者版", "mods": ["client"]},
+  "salon": {"label": "美容師・サロン版", "mods": ["salon", "invoice", "tax", "shift"]},
+  "shop": {"label": "小売店版", "mods": ["shop", "tax", "shift"]},
+  "life": {"label": "くらし・制度版", "mods": ["health", "pension", "money", "tax"]},
+  "tutor": {"label": "小規模教室・個人講師版", "mods": ["tutor", "invoice", "money", "tax", "shift"]},
+  "craft": {"label": "ハンドメイド・受注制作版", "mods": ["craft", "make", "invoice", "tax", "shift"]},
+  "service": {"label": "清掃・訪問サービス版", "mods": ["service", "invoice", "work", "tax", "shift"]},
+  "creator": {"label": "創作・自己出版版", "mods": ["creator", "work", "invoice", "tax"]}
+}
