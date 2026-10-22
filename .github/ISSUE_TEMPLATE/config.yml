@@ -3,4 +3,3 @@ contact_links:
   - name: セキュリティの問題（非公開で報告）
     url: https://docs.github.com/ja/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability
     about: 悪用につながる情報は公開のIssueに書かず、リポジトリの「Security」タブから非公開で報告してください。
-

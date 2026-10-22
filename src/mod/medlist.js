@@ -1,0 +1,6 @@
+/* 福祉向け薬の申し送りのための見本。処方・投与指示は行わない。 */
+(function(root){'use strict';var U=root.UI,h=U.h,St=root.Store,C=root.Calc,KD=root.KD;
+var cols={welfareMeds:{title:'利用者別・服薬確認メモ',sensitive:true,desc:'処方変更や投薬判断を行うものではありません。医療者の正式な指示と事業所の確認手順を優先。薬名や情報は必要最小限を記録してください。',fields:[{k:'date',label:'確認日',type:'date'},{k:'person',label:'利用者ID'},{k:'slot',label:'時間帯',type:'select',options:['朝','昼','夕','寝る前','その他']},{k:'med',label:'薬の識別名・薬袋の表記（任意）'},{k:'status',label:'確認状態',type:'select',options:['未確認','本人申告で確認','記録のみ','別途確認']},{k:'staff',label:'確認者ID'},{k:'memo',label:'申し送り',type:'textarea'}]}};
+function view(){var v=h('div');v.appendChild(root.App.viewHead('服薬確認メモ','利用者IDごとに服薬の確認状況を記録します。処方・服薬の判断を代替しません。'));v.appendChild(U.card('注意事項',{wide:true},h('p',{class:'small'},'架空サンプルの「サンプル薬A」などは実在の処方情報ではありません。服薬の指示や投与の管理は正式な記録と専門職の確認を優先してください。')));v.appendChild(U.table('welfareMeds',{sort:function(a,b){return String(b.date).localeCompare(String(a.date));},newRow:function(){return {date:C.today(),slot:'朝',status:'未確認'};}}));return v;}
+KD.mod({id:'medlist',title:'服薬確認メモ',icon:'薬',order:10,collections:cols,view:view,sample:function(H){return {welfareMeds:Array.from({length:12},function(_,i){return {date:H.day(-i%3),person:'DEMO-U'+C.pad(i+1),slot:i%2?'寝る前':'朝',med:'架空のサンプル薬'+(i%2?'B':'A'),status:i%5?'本人申告で確認':'別途確認',staff:'DEMO-S0'+(2+i%3),memo:'架空サンプル。実際の薬剤・用量とは無関係。'};})};}});
+})(this);
